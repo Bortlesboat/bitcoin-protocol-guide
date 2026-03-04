@@ -4,3 +4,4 @@ config.py
 .env
 wallet.dat
 *.wallet
+TOOLING-OPPORTUNITIES.md
