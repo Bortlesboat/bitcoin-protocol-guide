@@ -1,0 +1,6 @@
+*_PERSONAL.*
+config.py
+*.csv
+.env
+wallet.dat
+*.wallet
