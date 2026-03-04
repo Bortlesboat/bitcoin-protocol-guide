@@ -209,6 +209,8 @@ You can also use [mempool.space](https://mempool.space) or [ordinals.com](https:
 4. SegWit's witness discount makes inscriptions 4× cheaper than other on-chain data
 5. BRC-20 tokens are JSON inscriptions tracked by off-chain indexers — not enforceable by consensus
 6. Runes is a UTXO-native alternative that doesn't bloat the UTXO set
+7. Inscription fees are now a significant component of miner revenue (see [Chapter 10](10-mining-hardware.md) for why this matters post-halving)
+8. RGB protocol offers an alternative: client-side validated tokens that don't use block space at all (see [Chapter 12](12-future-bitcoin.md))
 
 ---
 

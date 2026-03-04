@@ -139,7 +139,7 @@ SegWit's activation was politically contentious:
 4. **BIP 91**: Miners capitulated and locked in SegWit days before the UASF deadline
 5. SegWit activated at block 481,824 (August 24, 2017)
 
-This established that users (node operators) ultimately control Bitcoin's consensus rules, not miners.
+This established that users (node operators) ultimately control Bitcoin's consensus rules, not miners. For the full story of the UASF — including the political context, the CIA visit, and the block size wars that preceded it — see [Chapter 8](08-satoshi-timeline.md).
 
 ## Verify It Yourself
 

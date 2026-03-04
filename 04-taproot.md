@@ -168,6 +168,9 @@ bitcoin-cli gettxout <txid> <vout>
 4. Key tweaking commits to a script tree without revealing it
 5. Ordinals use the script-path to embed data in the witness via an `OP_FALSE OP_IF` envelope
 6. Without both SegWit (cheap witness) and Taproot (script-path data), inscriptions wouldn't work
+7. Taproot addresses (`bc1p...`) are supported by all major hardware wallets — see [Chapter 9](09-wallets-self-custody.md) for the address type compatibility matrix
+8. Lightning Taproot channels use P2TR for privacy — cooperative closes look like normal spends (see [Chapter 12](12-future-bitcoin.md))
+9. BIP 360 proposes P2MR as a quantum-resistant alternative that removes the key-path spend entirely (see [Chapter 12](12-future-bitcoin.md))
 
 ---
 

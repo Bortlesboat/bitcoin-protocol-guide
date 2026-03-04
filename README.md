@@ -16,6 +16,10 @@ No price talk. No trading. Pure protocol.
 | 06 | [The BIP-110 Debate](06-bip110-debate.md) | The "spam war" — what's at stake |
 | 07 | [Node Setup](07-node-setup.md) | Running Bitcoin Knots/Core on Windows |
 | 08 | [Satoshi's Timeline & Core History](08-satoshi-timeline.md) | From genesis block to current maintainers — who built Bitcoin and who stewards it now |
+| 09 | [Wallets & Self-Custody](09-wallets-self-custody.md) | Key generation, hardware wallets, multisig, PSBTs, seed storage, and inheritance planning |
+| 10 | [Mining & Hardware](10-mining-hardware.md) | From CPU to 1,160 TH/s ASICs — mining economics, pools, Stratum V2, and the AI pivot |
+| 11 | [The Bitcoin Network](11-bitcoin-network.md) | P2P layer: node types, block propagation, compact blocks, eclipse attacks, Tor/I2P |
+| 12 | [The Future of Bitcoin](12-future-bitcoin.md) | CTV, OP_CAT, covenants, Silent Payments, BitVM, RGB, Ark, and the ossification debate |
 
 ### Bonus
 
@@ -31,10 +35,11 @@ No price talk. No trading. Pure protocol.
 Every claim in this guide can be verified with a Bitcoin node and `bitcoin-cli`. The goal is to understand *why* Bitcoin works the way it does, not just *what* it does. Each chapter builds on the last:
 
 ```
-UTXOs → Script → SegWit → Taproot → Ordinals → BIP-110 → [History]
+UTXOs → Script → SegWit → Taproot → Ordinals → BIP-110 → Node Setup → History
+    → Self-Custody → Mining → Network → Future
 ```
 
-Each step in this chain is a prerequisite for understanding the next.
+Chapters 1-8 build linearly. Chapters 9-12 expand the picture: how to hold your keys, how mining works, how the network operates, and what's being built next.
 
 ## Prerequisites
 

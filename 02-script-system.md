@@ -131,7 +131,7 @@ The sender just sees a short hash. The complex multisig script is hidden until s
 ### Disabled opcodes
 
 Satoshi disabled several opcodes early on due to security concerns:
-- `OP_CAT` (concatenate) — now proposed for re-enabling (potential covenants)
+- `OP_CAT` (concatenate) — now proposed for re-enabling as BIP 347 (see [Chapter 12](12-future-bitcoin.md) for the full OP_CAT debate and what recursive covenants enable)
 - `OP_MUL`, `OP_DIV` — arithmetic that could cause issues
 - `OP_SUBSTR`, `OP_LEFT`, `OP_RIGHT` — string manipulation
 

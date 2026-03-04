@@ -411,6 +411,8 @@ This claim is sometimes dismissed as naive idealism. Here's why it's technically
 
 No single party controls all of these simultaneously. Bitcoin has no CEO, no board of directors, no kill switch, and no mailing address to serve a court order to.
 
+For a deeper look at one of these vectors — how mining pool operators control block template construction and why Stratum V2 is the fix — see [Chapter 10](10-mining-hardware.md).
+
 The closest thing to "control" that exists is the collective of economic nodes. If they converge on a rule, that rule is Bitcoin. If they diverge, you get a chain split (like Bitcoin Cash in 2017). Even that split shows the system working as designed: those who disagreed could leave.
 
 ---
@@ -441,5 +443,7 @@ The system works. That was the goal.
 ---
 
 **Previous:** [Chapter 7 — Node Setup](07-node-setup.md) — Run your own node and verify everything yourself.
+
+**Next:** [Chapter 9 — Wallets & Self-Custody](09-wallets-self-custody.md) — How to actually hold your own keys without losing everything.
 
 **Related:** [Satoshi's Words](satoshi-quotes.md) — Verbatim quotes from the white paper and BitcoinTalk, with context.

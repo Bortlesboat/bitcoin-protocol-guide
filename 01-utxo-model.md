@@ -154,6 +154,8 @@ bitcoin-cli gettxout <txid> <vout>
 3. Change goes back to you (if you remember to add the output)
 4. Fees = inputs - outputs (implicit, no fee field)
 5. The UTXO set is Bitcoin's entire current state
+6. Wallet software manages your UTXOs for you — see [Chapter 9](09-wallets-self-custody.md) for how HD wallets derive keys and track your UTXOs
+7. Covenants (proposed in [Chapter 12](12-future-bitcoin.md)) would add the ability to restrict *where* UTXOs can be spent — a fundamental extension of the UTXO model
 
 ---
 

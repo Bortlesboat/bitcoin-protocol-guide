@@ -218,7 +218,9 @@ btc getrawtransaction <inscription-txid> 2 | jq '.vin[0].txinwitness'
 3. Building txindex from scratch takes hours but enables full exploration
 4. Create a shell alias or batch file for convenient CLI access
 5. Bitcoin Knots and Core share consensus rules but differ in relay policy
+6. For deeper understanding of what your node does on the network — peer discovery, block propagation, compact blocks, and eclipse attack resistance — see [Chapter 11](11-bitcoin-network.md)
+7. Bitcoin Core 28+ supports **AssumeUTXO** for faster initial sync — see [Chapter 11](11-bitcoin-network.md) for how it works
 
 ---
 
-**Back to:** [Table of Contents](README.md)
+**Next:** [Chapter 8 — Satoshi's Timeline and Bitcoin Core History](08-satoshi-timeline.md) — Who created Bitcoin, who maintains it now, and who actually controls the protocol.

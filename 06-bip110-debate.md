@@ -169,6 +169,8 @@ Your answer to this question determines your position on BIP-110, and probably e
 3. Anti: Paid fees = legitimate use, restrictions don't work (data finds other paths), miner revenue, chain split risk
 4. The real question: Is Bitcoin neutral infrastructure or purpose-built money?
 5. Currently ~3% of nodes, far from the 55% hashrate threshold needed
+6. Miner economics make this debate existential — see [Chapter 10](10-mining-hardware.md) for why fee revenue must replace the block subsidy
+7. RGB and Taproot Assets offer non-bloating alternatives for tokens — see [Chapter 12](12-future-bitcoin.md) for how these could resolve the debate by making on-chain data unnecessary for asset issuance
 
 ---
 
