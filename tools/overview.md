@@ -80,5 +80,5 @@ All tools share a common RPC client (`rpc.py`) that handles authentication via B
 These tools are part of a larger Bitcoin product suite:
 
 - **[bitcoinlib-rpc](https://github.com/Bortlesboat/bitcoinlib-rpc)** — The pip-installable Python library powering these tools (available now)
-- **bitcoin-mcp** — An MCP server so AI agents can query your node (coming soon)
+- **[bitcoin-mcp](https://github.com/Bortlesboat/bitcoin-mcp)** — MCP server: 20 tools for AI agents to query your node (available now)
 - **Bitcoin Fee Observatory** — A Streamlit dashboard for fee market analytics (coming soon)
