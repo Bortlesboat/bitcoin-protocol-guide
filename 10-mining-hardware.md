@@ -186,7 +186,7 @@ Key observations:
 - Below $0.04/kWh is the "printing money" zone. This is where flared gas, stranded hydro, and curtailed renewable sites operate.
 - $0.06–0.08/kWh is where well-run industrial operations live.
 - Above $0.10/kWh, you're fighting for scraps. Residential electricity rates in most developed countries ($0.10–0.30/kWh) make home mining a money-losing hobby.
-- At $0.14/kWh and above, even efficient hardware loses money. This is where older-generation machines (S19 series, <100 J/TH) have already been forced offline.
+- At $0.14/kWh and above, even efficient hardware loses money. This is where older-generation machines (S19 series, 20-30 J/TH) have already been forced offline.
 
 ### The Halving Cycle and Profitability
 
@@ -235,7 +235,7 @@ Mining pools solve this problem through statistical aggregation. Thousands of mi
 | **F2Pool** | ~10% | Beijing, China | One of the oldest pools (founded 2013). |
 | **Marathon (MARA Pool)** | ~5% | Fort Lauderdale, FL | Publicly traded miner (MARA) running their own pool. |
 | **Binance Pool** | ~4% | Global | Exchange-operated pool. |
-| **Ocean** | ~2% | Decentralized | Stratum V2 early adopter; non-custodial payouts via BOLT 12. |
+| **Ocean** | ~2% | Decentralized | Stratum V2 early adopter; non-custodial payouts directly in the coinbase transaction. |
 | **Others** | ~19% | Various | Includes SpiderPool, Luxor, EMCD, SBI Crypto, Braiins, etc. |
 
 **The concentration problem is severe.** The top 4 pools (Foundry, AntPool, ViaBTC, F2Pool) control approximately 70% of total network hashrate. This is not mining centralization in the traditional sense — the individual miners who point hashrate at these pools can switch at any time — but it creates a different, arguably more dangerous form of centralization: **block template centralization**.

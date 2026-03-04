@@ -14,17 +14,17 @@ Every UTXO is locked by a small program called a **script**. To spend a UTXO, yo
 
 Bitcoin Script is **stack-based**, like Forth or a reverse Polish notation calculator. There are no loops (by design — scripts must terminate), no floating point, and no access to external state.
 
-Spending a UTXO runs two scripts in sequence:
+Spending a UTXO evaluates two scripts:
 
 ```
-scriptSig (provided by spender) + scriptPubKey (set by previous creator)
+scriptSig (provided by spender) → scriptPubKey (set by previous creator)
 ```
 
 As Satoshi put it:
 
 > "The script is actually a predicate. It's just an equation that evaluates to true or false. Predicate is a long and unfamiliar word so I called it script."
 
-The combined script executes on a stack. If the stack's top value is non-zero (truthy) when execution finishes, the spend is valid.
+**Important:** Since BIP 16 (P2SH, 2012), scriptSig and scriptPubKey are **not concatenated** — they run in separate evaluation contexts. The scriptSig executes first, and its resulting stack is copied as input to the scriptPubKey. This separation fixed a class of attacks where a crafted scriptSig could manipulate the scriptPubKey's execution. If the stack's top value is non-zero (truthy) after scriptPubKey finishes, the spend is valid.
 
 ### Example: P2PKH (Pay-to-Public-Key-Hash)
 
@@ -122,7 +122,7 @@ The sender just sees a short hash. The complex multisig script is hidden until s
 | `OP_EQUAL` | Check if top two items are equal |
 | `OP_EQUALVERIFY` | `OP_EQUAL` + fail immediately if false |
 | `OP_CHECKSIG` | Verify a signature against a public key |
-| `OP_CHECKMULTISIG` | Verify M-of-N signatures |
+| `OP_CHECKMULTISIG` | Verify M-of-N signatures (has a famous off-by-one bug — consumes an extra dummy stack element, which must be `OP_0` per BIP 147) |
 | `OP_RETURN` | Mark output as provably unspendable (used for data embedding) |
 | `OP_CHECKLOCKTIMEVERIFY` | Require a minimum block height or timestamp |
 | `OP_CHECKSEQUENCEVERIFY` | Require a minimum relative timelock |
@@ -142,12 +142,12 @@ These are **consensus rules** — any transaction using them is invalid, period.
 `OP_RETURN` creates a provably unspendable output. Nodes can safely prune these from the UTXO set since they can never be spent.
 
 ```
-OP_RETURN <up to 80 bytes of arbitrary data>
+OP_RETURN <arbitrary data>
 ```
 
 Before OP_RETURN, people embedded data by creating fake addresses (which bloated the UTXO set permanently). OP_RETURN was a compromise: "If you must put data on-chain, at least don't pollute the UTXO set."
 
-This is relevant to the [Ordinals debate](06-bip110-debate.md) — OP_RETURN has a size limit, but witness data does not (post-SegWit).
+**Note on the size limit:** Bitcoin Core historically enforced an 80-byte OP_RETURN relay policy (raised to 83 bytes), but this was a **node policy rule, not a consensus rule**. Miners could always include larger OP_RETURN outputs in blocks. Bitcoin Core v30 (October 2025) removed the relay limit entirely. This is relevant to the [Ordinals debate](06-bip110-debate.md) — BIP-110 proposes re-imposing data limits at the consensus level.
 
 ## Sighash Types
 
@@ -157,7 +157,7 @@ When signing a transaction, you choose *what parts* of the transaction the signa
 |---------|-------|----------|
 | `SIGHASH_ALL` | All inputs + all outputs | Normal spending (default) |
 | `SIGHASH_NONE` | All inputs, no outputs | "I'm paying, send it wherever" |
-| `SIGHASH_SINGLE` | All inputs + matching output | Partial signing for swaps |
+| `SIGHASH_SINGLE` | Only this input + the output at the same index | Partial signing for swaps |
 | `SIGHASH_ANYONECANPAY` | Only this input | Combinable with above — crowdfunding |
 
 `ANYONECANPAY | ALL` means: "I sign my input and all outputs, but anyone can add more inputs." This enables on-chain crowdfunding — multiple people contribute inputs to fund a shared set of outputs.

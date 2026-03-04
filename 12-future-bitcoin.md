@@ -345,7 +345,7 @@ The toolkit works with any agent framework that can execute shell commands, incl
 
 BitVM is Robin Linus's answer to the question: "Can Bitcoin verify arbitrary computation without changing the protocol?"
 
-The answer, published in his December 2023 paper "BitVM: Compute Anything on Bitcoin," is yes — with caveats.
+The answer, published in his October 2023 paper "BitVM: Compute Anything on Bitcoin," is yes — with caveats.
 
 ### How BitVM Works
 

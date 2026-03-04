@@ -118,7 +118,7 @@ The `OP_FALSE OP_IF` trick means the inscription data is **present in the witnes
 - Multiple pushes can be chained for larger content
 - Taproot removed the old 10,000-byte script size limit
 - Only constrained by the **4M weight unit block limit**
-- Maximum single inscription: ~400 KB (nearly filling an entire block's witness)
+- Maximum single inscription: ~3.9 MB (nearly filling an entire block's witness space)
 
 ## BRC-20 Tokens
 

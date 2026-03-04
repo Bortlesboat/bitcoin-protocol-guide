@@ -8,7 +8,7 @@
 
 That prediction is half right and half wrong — and the tension between the two halves defines everything about Bitcoin's peer-to-peer layer.
 
-Satoshi was right that running a node would become harder over time. The blockchain is over 600 GB in 2026. Initial block download takes hours to days on consumer hardware. Bandwidth requirements are nontrivial. Most Bitcoin users don't run nodes — they use wallets that connect to someone else's infrastructure.
+Satoshi was right that running a node would become harder over time. The blockchain is over 700 GB in 2026. Initial block download takes hours to days on consumer hardware. Bandwidth requirements are nontrivial. Most Bitcoin users don't run nodes — they use wallets that connect to someone else's infrastructure.
 
 But Satoshi was wrong about the "server farm" endgame. As of early 2026, roughly 20,000 reachable full nodes operate globally, and an estimated 60,000+ total nodes exist when you count Tor, I2P, and non-listening nodes behind NATs. Many of these run on consumer hardware — Raspberry Pis, old laptops, $200 mini PCs. The community has fought hard — through pruning, compact blocks, assumeUTXO, and relentless optimization — to keep node operation within reach of ordinary people.
 
@@ -45,7 +45,7 @@ bitcoin-cli getblockchaininfo
 A pruned node does everything a full node does — with one difference: after validating old blocks, it **discards** the raw block data to save disk space. It retains only:
 
 - The complete UTXO set (required to validate new transactions)
-- Recent blocks (configurable; default is 550 blocks, about 4 days)
+- Recent blocks (configurable; minimum is 550 MB of block data)
 - All block headers (80 bytes each — trivial storage)
 
 **Storage requirement:** As low as ~7-10 GB with aggressive pruning settings.
@@ -54,7 +54,7 @@ A pruned node does everything a full node does — with one difference: after va
 
 ```bash
 # Enable pruning (in bitcoin.conf)
-# prune=550   # Keep last 550 blocks (~550 MB minimum)
+# prune=550   # Keep 550 MB of recent block data (minimum allowed)
 
 # Or start with pruning:
 bitcoind -prune=1000  # Keep ~1 GB of recent blocks

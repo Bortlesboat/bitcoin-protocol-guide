@@ -112,7 +112,7 @@ The UTXO set is the current state of Bitcoin — every unspent output that exist
 
 - ~180 million UTXOs
 - ~12 GB of data
-- Stored in every full node's memory (LevelDB)
+- Stored on disk in LevelDB, with a configurable memory cache (default ~450 MB)
 
 This is the only state a node needs to validate new transactions. You don't need the full blockchain history to know if a transaction is valid — just the current UTXO set.
 

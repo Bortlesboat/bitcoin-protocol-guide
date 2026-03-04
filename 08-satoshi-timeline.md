@@ -56,7 +56,7 @@ He needed the citation date for b-money. That's it. Professional, direct, no fan
 | Jun 2010 | Satoshi grants commit access | Gavin Andresen, Martti Malmi, Laszlo Hanyecz, and others added |
 | Jun 17, 2010 | Defends Script system on BitcoinTalk | "The nature of Bitcoin is such that once version 0.1 was released, the core design was set in stone" |
 | Jul 2010 | Scalability thread | Predicts server farm nodes for large scale |
-| Aug 2010 | Value overflow incident | Critical 0.1 BTC inflation bug fixed within hours by Satoshi; first emergency patch |
+| Aug 2010 | Value overflow incident | Critical bug created 184 billion BTC out of thin air; Satoshi released emergency patch within hours, rolling back the invalid block |
 | Oct 4, 2010 | Block size discussion | Describes mechanism to raise size limit via scheduled hard fork |
 | Oct 23, 2010 | Messages on the blockchain | "Messages should not be recorded in the block chain. The messages could be signed with the bitcoin address keypairs to prove who they're from." |
 | **Dec 11, 2010** | WikiLeaks post | "WikiLeaks has kicked the hornet's nest, and the swarm is headed towards us." — second-to-last public post |

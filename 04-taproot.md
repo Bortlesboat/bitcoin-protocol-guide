@@ -136,7 +136,7 @@ More details in [Chapter 5](05-ordinals-inscriptions.md).
 
 ## Taproot Activation: Speedy Trial
 
-Unlike SegWit's contentious activation, Taproot used "Speedy Trial" (BIP 8 variant):
+Unlike SegWit's contentious activation, Taproot used "Speedy Trial" (a modified BIP 9 approach):
 
 - 90% miner signaling threshold
 - Locked in June 12, 2021 (within the first signaling period)
