@@ -2,11 +2,15 @@
 
 A collection of Python tools for querying and analyzing a local Bitcoin node. These tools complement the guide — every concept discussed in the chapters can be verified using these scripts against your own node.
 
-## Requirements
+## Install
 
-- A fully synced Bitcoin Core or Bitcoin Knots node with `server=1` and `txindex=1`
-- Python 3.10+
-- `pip install requests`
+```bash
+pip install bitcoinlib-rpc
+```
+
+**Requirements:** A fully synced Bitcoin Core or Bitcoin Knots node with `server=1` and `txindex=1`, Python 3.10+.
+
+**Source:** [github.com/Bortlesboat/bitcoinlib-rpc](https://github.com/Bortlesboat/bitcoinlib-rpc)
 
 ## The Toolkit
 
@@ -21,20 +25,33 @@ A collection of Python tools for querying and analyzing a local Bitcoin node. Th
 ## Quick Start
 
 ```bash
-# Clone the tools
-git clone https://github.com/Bortlesboat/bitcoin-protocol-tools
-cd bitcoin-protocol-tools
+pip install bitcoinlib-rpc
 
-# Install dependencies
-pip install requests
+# CLI tools (auto-detect node via cookie authentication)
+bitcoin-status
+bitcoin-mempool
+bitcoin-block 939290
+bitcoin-tx a1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d
+bitcoin-fees --once
+bitcoin-nextblock
+```
 
-# Configure (edit config.py with your node's RPC settings)
-cp config_example.py config.py
+### Python API
 
-# Try it
-python mempool_analyzer.py
-python block_analyzer.py 939000
-python tx_decoder.py <any-txid>
+```python
+from bitcoinlib_rpc import BitcoinRPC
+from bitcoinlib_rpc.mempool import analyze_mempool
+from bitcoinlib_rpc.blocks import analyze_block
+
+rpc = BitcoinRPC()  # auto-detects cookie auth
+
+mempool = analyze_mempool(rpc)
+print(f"Congestion: {mempool.congestion}")
+print(f"Next block min fee: {mempool.next_block_min_fee:.1f} sat/vB")
+
+block = analyze_block(rpc, 939290)
+print(f"Mined by: {block.pool_name}")
+print(f"Taproot adoption: {block.taproot_pct:.1f}%")
 ```
 
 ## Architecture
@@ -58,9 +75,10 @@ All tools share a common RPC client (`rpc.py`) that handles authentication via B
   mempool  tx   block    fee_tracker  next_block
 ```
 
-## Coming Soon
+## Ecosystem
 
-These tools are being packaged as:
-- **bitcoinlib-rpc** — A pip-installable Python library with typed returns
-- **bitcoin-mcp** — An MCP server so AI agents can query your node
-- **Bitcoin Fee Observatory** — A Streamlit dashboard for fee market analytics
+These tools are part of a larger Bitcoin product suite:
+
+- **[bitcoinlib-rpc](https://github.com/Bortlesboat/bitcoinlib-rpc)** — The pip-installable Python library powering these tools (available now)
+- **bitcoin-mcp** — An MCP server so AI agents can query your node (coming soon)
+- **Bitcoin Fee Observatory** — A Streamlit dashboard for fee market analytics (coming soon)

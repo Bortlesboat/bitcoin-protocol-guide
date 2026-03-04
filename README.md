@@ -54,6 +54,19 @@ Chapters 1-8 build linearly. Chapters 9-12 expand the picture: how to hold your 
 3. **Decode the example transactions** — seeing real data makes it click
 4. **Use mempool.space** as a visual companion — paste any txid to see it rendered
 
+## Tools
+
+Query your own node with **[bitcoinlib-rpc](https://github.com/Bortlesboat/bitcoinlib-rpc)** — a typed Python wrapper for Bitcoin Core RPC:
+
+```bash
+pip install bitcoinlib-rpc
+bitcoin-mempool    # Fee buckets, congestion analysis
+bitcoin-block 939290  # Pool ID, SegWit/Taproot adoption
+bitcoin-tx <txid>  # Full decode + inscription detection
+```
+
+See the [Tools section](tools/overview.md) for details.
+
 ## Contributing
 
 Found an error? Open an issue or PR. This is a living document.
