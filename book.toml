@@ -1,0 +1,17 @@
+[book]
+title = "Bitcoin Protocol Guide"
+description = "A deep dive into Bitcoin's protocol internals — from UTXOs to Taproot to the Ordinals debate."
+authors = ["Bortlesboat"]
+language = "en"
+src = "."
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+default-theme = "navy"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/Bortlesboat/bitcoin-protocol-guide"
+edit-url-template = "https://github.com/Bortlesboat/bitcoin-protocol-guide/edit/main/{path}"
+site-url = "/bitcoin-protocol-guide/"

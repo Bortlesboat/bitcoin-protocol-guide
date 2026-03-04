@@ -5,3 +5,4 @@ config.py
 wallet.dat
 *.wallet
 TOOLING-OPPORTUNITIES.md
+book/
