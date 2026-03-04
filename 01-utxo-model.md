@@ -30,11 +30,11 @@ INPUTS (UTXOs being spent)          OUTPUTS (new UTXOs being created)
 ┌─────────────────────┐            ┌─────────────────────┐
 │ UTXO: 0.5 BTC       │──────────►│ 0.3 BTC → recipient │
 │ (from previous tx)   │           ├─────────────────────┤
-├─────────────────────┤           │ 0.1999 BTC → me     │ ← change
+├─────────────────────┤           │ 0.2999 BTC → me     │ ← change
 │ UTXO: 0.1 BTC       │           │ (back to my address) │
 │ (from previous tx)   │──────────►└─────────────────────┘
 └─────────────────────┘
-                                    Fee = 0.6 - 0.4999 = 0.0001 BTC
+                                    Fee = 0.6 - 0.5999 = 0.0001 BTC
 ```
 
 ### Key rules:
@@ -79,7 +79,7 @@ Bitcoin works identically. Every UTXO is an indivisible unit that must be fully 
       "scriptPubKey": "..."    // Lock: who can spend this?
     },
     {
-      "value": 19990000,       // Change (0.1999 BTC)
+      "value": 29990000,       // Change (0.2999 BTC)
       "scriptPubKey": "..."    // Lock: back to me
     }
   ],
