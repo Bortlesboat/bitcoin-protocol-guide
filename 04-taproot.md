@@ -108,6 +108,19 @@ To spend via script-path: reveal the internal key + merkle proof + the specific 
 
 ## How Ordinals Use Taproot
 
+```mermaid
+sequenceDiagram
+    participant W as Wallet
+    participant BC as Blockchain
+    participant N as Nodes
+
+    W->>BC: 1. Commit Tx — create P2TR output<br/>(script tree hides inscription data)
+    Note over BC: Output looks like any<br/>normal Taproot output
+    W->>BC: 2. Reveal Tx — spend via script-path<br/>(publishes inscription in witness)
+    BC->>N: Nodes validate & store witness data
+    Note over N: Inscription permanently<br/>recorded on-chain
+```
+
 Ordinals exploit the script-path mechanism:
 
 1. **Commit transaction**: Create an output whose Taproot script tree contains the inscription data

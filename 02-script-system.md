@@ -64,6 +64,21 @@ The script checks: "Does the provided public key hash to the address, AND does t
 
 ## Script Types: A History of Upgrades
 
+```mermaid
+flowchart LR
+    P2PKH["**P2PKH**<br/>2009<br/>Hash of pubkey"]
+    P2SH["**P2SH**<br/>2012<br/>Hash of script"]
+    P2WPKH["**P2WPKH**<br/>2017<br/>SegWit single-sig"]
+    P2WSH["**P2WSH**<br/>2017<br/>SegWit scripts"]
+    P2TR["**P2TR**<br/>2021<br/>Schnorr + MAST"]
+
+    P2PKH -->|"complex conditions"| P2SH
+    P2SH -->|"witness discount"| P2WPKH
+    P2SH -->|"witness discount"| P2WSH
+    P2WPKH -->|"Schnorr + privacy"| P2TR
+    P2WSH -->|"Schnorr + privacy"| P2TR
+```
+
 Each new script type solved specific problems:
 
 ### P2PKH — Pay to Public Key Hash (2009)

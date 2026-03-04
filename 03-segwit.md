@@ -56,6 +56,19 @@ Since the signature is no longer part of the txid, malleability is fixed.
 
 ## Weight Units: The New Size Metric
 
+```mermaid
+flowchart TB
+    subgraph Legacy["Legacy Transaction (250 bytes)"]
+        L1["250 bytes × 4 = **1,000 WU**"]
+    end
+    subgraph SegWit["SegWit Transaction (same data)"]
+        S1["150 non-witness bytes × 4 = 600 WU"]
+        S2["100 witness bytes × 1 = 100 WU"]
+        S3["Total: **700 WU** (30% savings)"]
+    end
+    Legacy ~~~ SegWit
+```
+
 SegWit replaced the simple byte-count block size limit with a **weight** system:
 
 ```
