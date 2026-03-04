@@ -15,6 +15,7 @@ No price talk. No trading. Pure protocol.
 | 05 | [Ordinals & Inscriptions](05-ordinals-inscriptions.md) | How NFTs and tokens work on Bitcoin |
 | 06 | [The BIP-110 Debate](06-bip110-debate.md) | The "spam war" — what's at stake |
 | 07 | [Node Setup](07-node-setup.md) | Running Bitcoin Knots/Core on Windows |
+| 08 | [Satoshi's Timeline & Core History](08-satoshi-timeline.md) | From genesis block to current maintainers — who built Bitcoin and who stewards it now |
 
 ### Bonus
 
@@ -30,7 +31,7 @@ No price talk. No trading. Pure protocol.
 Every claim in this guide can be verified with a Bitcoin node and `bitcoin-cli`. The goal is to understand *why* Bitcoin works the way it does, not just *what* it does. Each chapter builds on the last:
 
 ```
-UTXOs → Script → SegWit → Taproot → Ordinals → BIP-110
+UTXOs → Script → SegWit → Taproot → Ordinals → BIP-110 → [History]
 ```
 
 Each step in this chain is a prerequisite for understanding the next.
