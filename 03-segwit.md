@@ -1,5 +1,21 @@
 # Chapter 3: Segregated Witness (SegWit)
 
+## In Satoshi's Words
+
+Satoshi never saw SegWit (he disappeared in 2011), but he anticipated the scaling challenges that drove its creation:
+
+> "The current system where every user is a network node is not the intended configuration for large scale. That would be like every Usenet user runs their own NNTP server. The design supports letting users just be users."
+>
+> — Satoshi Nakamoto, [BitcoinTalk](https://satoshi.nakamotoinstitute.org/posts/bitcointalk/threads/127/) (July 2010)
+
+And he explicitly proposed raising the block size limit via a scheduled upgrade:
+
+> "It can be phased in, like: `if (blocknumber > 115000) maxblocksize = largerlimit`. It can start being in versions way ahead, so by the time it reaches that block number and goes into effect, the older versions that don't have it are already obsolete."
+>
+> — Satoshi Nakamoto, [BitcoinTalk](https://satoshi.nakamotoinstitute.org/posts/bitcointalk/threads/233/) (October 4, 2010)
+
+SegWit took a different approach than Satoshi's simple size increase — but the problem it solved was the one he identified.
+
 ## The Upgrade That Made Everything Possible
 
 SegWit (BIP 141, activated August 2017) is the most consequential upgrade in Bitcoin's history. It fixed transaction malleability, enabled the Lightning Network, introduced script versioning, and — critically — created the weight discount that makes Ordinals economically viable.

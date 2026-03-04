@@ -1,5 +1,11 @@
 # Chapter 2: The Script System
 
+## In Satoshi's Words
+
+> "The nature of Bitcoin is such that once version 0.1 was released, the core design was set in stone for the rest of its lifetime. Because of that, I wanted to design it to support every possible transaction type I could think of. The problem was, each thing required special support code and data fields whether it was used or not, and only covered one special case at a time. It would have been an explosion of special cases. The solution was script, which generalizes the problem so transacting parties can describe their transaction as a predicate that the node network evaluates."
+>
+> — Satoshi Nakamoto, [BitcoinTalk](https://satoshi.nakamotoinstitute.org/posts/bitcointalk/threads/69/) (June 17, 2010)
+
 ## Bitcoin's Hidden Programming Language
 
 Every UTXO is locked by a small program called a **script**. To spend a UTXO, you must provide another script that makes the combined program evaluate to `true`. This is Bitcoin's programmability layer — simple, deliberate, and intentionally limited.
@@ -13,6 +19,10 @@ Spending a UTXO runs two scripts in sequence:
 ```
 scriptSig (provided by spender) + scriptPubKey (set by previous creator)
 ```
+
+As Satoshi put it:
+
+> "The script is actually a predicate. It's just an equation that evaluates to true or false. Predicate is a long and unfamiliar word so I called it script."
 
 The combined script executes on a stack. If the stack's top value is non-zero (truthy) when execution finishes, the spend is valid.
 
@@ -60,6 +70,12 @@ Each new script type solved specific problems:
 - Address format: `1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa`
 - The original. Lock to a hash of a public key
 - Problem: No way to create complex spending conditions
+
+Satoshi had already planned for these advanced use cases:
+
+> "The design supports a tremendous variety of possible transaction types that I designed years ago. Escrow transactions, bonded contracts, third party arbitration, multi-party signature, etc. If Bitcoin catches on in a big way, these are things we'll want to explore in the future, but they all had to be designed at the beginning to make sure they would be possible later."
+>
+> — Satoshi Nakamoto, [BitcoinTalk](https://satoshi.nakamotoinstitute.org/posts/bitcointalk/threads/69/) (June 17, 2010)
 
 ### P2SH — Pay to Script Hash (2012, BIP 16)
 - Address format: `3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy`

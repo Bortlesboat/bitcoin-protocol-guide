@@ -1,5 +1,11 @@
 # Chapter 1: The UTXO Model
 
+## In Satoshi's Words
+
+> "We define an electronic coin as a chain of digital signatures. Each owner transfers the coin to the next by digitally signing a hash of the previous transaction and the public key of the next owner and adding these to the end of the coin. A payee can verify the signatures to verify the chain of ownership."
+>
+> — White paper, [Section 2: Transactions](https://bitcoin.org/bitcoin.pdf) (October 2008)
+
 ## The Mental Model That Makes Everything Click
 
 Forget bank accounts. Bitcoin doesn't track balances. Instead, it tracks **unspent transaction outputs** (UTXOs) — think of them as individual coins sitting in lockboxes.
@@ -39,6 +45,12 @@ INPUTS (UTXOs being spent)          OUTPUTS (new UTXOs being created)
 4. **Each input must prove authorization** — via a digital signature (covered in [Chapter 2](02-script-system.md))
 
 ## Change Outputs
+
+Satoshi described this pattern directly in the white paper:
+
+> "Normally there will be either a single input from a larger previous transaction or multiple inputs combining smaller amounts, and at most two outputs: one for the payment, and one returning the change, if any, back to the sender."
+>
+> — White paper, [Section 9: Combining and Splitting Value](https://bitcoin.org/bitcoin.pdf)
 
 Change is the most confusing part for newcomers. Here's why it exists:
 
@@ -106,11 +118,21 @@ This is the only state a node needs to validate new transactions. You don't need
 
 ## Coinbase Transactions
 
+> "The steady addition of a constant of amount of new coins is analogous to gold miners expending resources to add gold to circulation. In our case, it is CPU time and electricity that is expended."
+>
+> — White paper, [Section 6: Incentive](https://bitcoin.org/bitcoin.pdf)
+
 Every block starts with a special transaction called the **coinbase transaction**. It has:
 - No inputs (it creates new bitcoin from nothing)
 - Outputs totaling the block subsidy + all fees from transactions in the block
 
 As of 2024 (post-4th halving), the block subsidy is **3.125 BTC**. The coinbase output can't be spent until 100 blocks later (coinbase maturity rule).
+
+The very first coinbase transaction (block 0, the genesis block) contains a famous message embedded by Satoshi:
+
+> "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+
+This served as both a timestamp proof (the block couldn't have been mined before that date) and a political statement about why Bitcoin was created. The genesis block's 50 BTC coinbase is permanently unspendable — a unique property of block 0.
 
 ## Verify It Yourself
 

@@ -18,6 +18,7 @@ No price talk. No trading. Pure protocol.
 
 ### Bonus
 
+- **[Satoshi's Words](satoshi-quotes.md)** — 19 verified, verbatim quotes from the white paper and BitcoinTalk forums
 - **[CLI Commands](cli-commands.md)** — Useful `bitcoin-cli` commands for exploring the blockchain
 - **[Examples](examples/)** — Real decoded transactions from mempool.space
   - [The Pizza Transaction](examples/pizza-tx.md) — 10,000 BTC for two pizzas (P2PKH)

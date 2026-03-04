@@ -4,6 +4,24 @@
 
 BIP-110 (also called BIP-444 / Reduced Data Temporary Softfork) is the most contentious proposal in Bitcoin since the block size wars. It proposes to limit arbitrary data in transactions, directly targeting Ordinals/Inscriptions. Understanding both sides requires everything from the previous chapters.
 
+## What Satoshi Said
+
+Both sides of this debate claim Satoshi's vision. Here are his actual words:
+
+**Pro-restriction camp cites:**
+> "Messages should not be recorded in the block chain."
+> — [BitcoinTalk](https://satoshi.nakamotoinstitute.org/posts/bitcointalk/threads/239/) (October 23, 2010)
+
+**Anti-restriction camp cites:**
+> "The incentive can transition entirely to transaction fees and be completely inflation free."
+> — White paper, [Section 6](https://bitcoin.org/bitcoin.pdf)
+
+And on Bitcoin's resilience:
+> "The network is robust in its unstructured simplicity... Any needed rules and incentives can be enforced with this consensus mechanism."
+> — White paper, [Section 12: Conclusion](https://bitcoin.org/bitcoin.pdf)
+
+The tension is real: Satoshi opposed non-financial data, but also designed a permissionless fee market as Bitcoin's long-term security model.
+
 ## What BIP-110 Does
 
 **Author:** Dathon Ohm, backed by Luke Dashjr (Bitcoin Knots maintainer)

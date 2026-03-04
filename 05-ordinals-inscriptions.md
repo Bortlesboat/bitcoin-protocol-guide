@@ -1,5 +1,13 @@
 # Chapter 5: Ordinals & Inscriptions
 
+## What Satoshi Said About Data on the Blockchain
+
+> "It would be unwise to have permanently recorded plaintext messages for everyone to see. It would be an accident waiting to happen. If there's going to be a message system, it should be a separate system parallel to the bitcoin network. Messages should not be recorded in the block chain."
+>
+> — Satoshi Nakamoto, [BitcoinTalk](https://satoshi.nakamotoinstitute.org/posts/bitcointalk/threads/239/) (October 23, 2010)
+
+This quote is the primary ammunition in the "spam debate" — Satoshi explicitly opposed non-financial data on-chain. Ordinals launched 13 years later, using mechanisms (SegWit + Taproot) that didn't exist when he wrote this.
+
 ## NFTs and Tokens on Bitcoin — Using Only Existing Rules
 
 Ordinals didn't require any protocol change. Casey Rodarmor built the entire system using Bitcoin's existing consensus rules — SegWit's witness discount, Taproot's script-path spending, and the UTXO model itself. That's what makes the debate so interesting.
