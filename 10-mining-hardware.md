@@ -221,7 +221,7 @@ Solo mining a Bitcoin block in 2026 is a lottery ticket. With network hashrate a
 234 TH/s / 800,000,000 TH/s = 0.00000029 (0.000029%)
 ```
 
-At 144 blocks per day, that miner would expect to find one block approximately every **9,500 days** — about 26 years. When it does find one, it earns ~3.125 BTC plus fees (roughly $300,000 at current prices). But the variance is extreme: you might find one in a week, or you might never find one.
+At 144 blocks per day, that miner would expect to find one block approximately every **24,000 days** — about 65 years. When it does find one, it earns ~3.125 BTC plus fees (roughly $300,000 at current prices). But the variance is extreme: you might find one in a week, or you might never find one.
 
 Mining pools solve this problem through statistical aggregation. Thousands of miners contribute hashrate to a pool, the pool finds blocks at a predictable rate, and rewards are distributed proportionally. You earn less per block, but you earn consistently.
 
@@ -344,11 +344,11 @@ Solo mining makes economic sense only when your hashrate is large enough that th
 
 | Your Hashrate | Expected Time to Find a Block | Variance Assessment |
 |--------------|-------------------------------|---------------------|
-| 234 TH/s (1 S21 Pro) | ~26 years | Absurd — you'll go bankrupt first |
-| 2.34 PH/s (10 S21 Pros) | ~2.6 years | Still extreme variance — could be 10+ years |
-| 23.4 PH/s (100 S21 Pros) | ~95 days | High variance but beginning to be viable for well-capitalized operators |
-| 234 PH/s (1,000 S21 Pros) | ~9.5 days | Reasonable — this is a small-to-medium mining farm |
-| 2.34 EH/s (10,000 S21 Pros) | ~23 hours | Low variance — finding blocks almost daily |
+| 234 TH/s (1 S21 Pro) | ~65 years | Absurd — you'll go bankrupt first |
+| 2.34 PH/s (10 S21 Pros) | ~6.5 years | Still extreme variance — could be 20+ years |
+| 23.4 PH/s (100 S21 Pros) | ~237 days | High variance but beginning to be viable for well-capitalized operators |
+| 234 PH/s (1,000 S21 Pros) | ~24 days | Reasonable — this is a small-to-medium mining farm |
+| 2.34 EH/s (10,000 S21 Pros) | ~2.4 days | Low variance — finding blocks every few days |
 
 ### When Solo Mining Makes Sense
 

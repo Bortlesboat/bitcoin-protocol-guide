@@ -23,6 +23,15 @@
 - [The Bitcoin Network](11-bitcoin-network.md)
 - [The Future of Bitcoin](12-future-bitcoin.md)
 
+# Tools
+
+- [Overview](tools/overview.md)
+- [Mempool Analyzer](tools/mempool.md)
+- [Transaction Decoder](tools/tx-decoder.md)
+- [Block Analyzer](tools/block-analyzer.md)
+- [Fee Tracker](tools/fee-tracker.md)
+- [Next Block Predictor](tools/next-block.md)
+
 # Reference
 
 - [Satoshi's Words](satoshi-quotes.md)

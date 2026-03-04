@@ -9,6 +9,13 @@ src = "."
 build-dir = "book"
 create-missing = false
 
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output.html.fold]
+enable = true
+level = 0
+
 [output.html]
 default-theme = "navy"
 preferred-dark-theme = "navy"

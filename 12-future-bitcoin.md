@@ -359,7 +359,7 @@ BitVM uses an **optimistic verification** model (similar to optimistic rollups o
 
 The key insight: Bitcoin doesn't need to *execute* the computation. It only needs to *verify* a single step if there's a dispute. Since any computation can be decomposed into binary gate operations, and Bitcoin Script can verify individual gates, Bitcoin can act as the final arbiter for any computation.
 
-**BitVM2** (the optimized version, with a peer-reviewed paper presented at the Science of Blockchain Conference at Berkeley) dramatically reduced the on-chain footprint. Where BitVM required hundreds of on-chain transactions for dispute resolution, BitVM2 reduces this to a handful. On June 3, 2025, the full unhappy path was validated on Bitcoin mainnet — Claim, Challenge, Assert, Disprove — confirming in 42 blocks (about 7.5 hours) at a total cost of approximately 14.9 million sats (~$16,000 at the time). This path is unlikely in practice, since honest operators avoid losing collateral.
+**BitVM2** (the optimized version, with a peer-reviewed paper presented at the Science of Blockchain Conference at Berkeley) dramatically reduced the on-chain footprint. Where BitVM required hundreds of on-chain transactions for dispute resolution, BitVM2 reduces this to a handful. On June 3, 2025, the full unhappy path was validated on Bitcoin mainnet — Claim, Challenge, Assert, Disprove — confirming in 42 blocks (about 7 hours) at a total cost of approximately 14.9 million sats (~$16,000 at the time). This path is unlikely in practice, since honest operators avoid losing collateral.
 
 ### BitVM Bridge
 

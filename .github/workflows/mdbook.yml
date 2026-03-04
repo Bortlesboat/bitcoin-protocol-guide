@@ -25,6 +25,13 @@ jobs:
         with:
           mdbook-version: "latest"
 
+      - name: Install mdbook-mermaid
+        run: |
+          mkdir -p /tmp/mdbook-mermaid
+          curl -sSL https://github.com/badboy/mdbook-mermaid/releases/latest/download/mdbook-mermaid-v0.14.0-x86_64-unknown-linux-gnu.tar.gz | tar -xz -C /tmp/mdbook-mermaid
+          install /tmp/mdbook-mermaid/mdbook-mermaid /usr/local/bin/
+          mdbook-mermaid install .
+
       - name: Build book
         run: mdbook build
 

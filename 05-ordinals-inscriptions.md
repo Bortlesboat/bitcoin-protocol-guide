@@ -17,7 +17,7 @@ Ordinals didn't require any protocol change. Casey Rodarmor built the entire sys
 Every satoshi that has ever existed or will exist gets a unique **ordinal number** based on the order it was mined:
 
 - The first satoshi ever mined (block 0, first output) = ordinal 0
-- The 50 billionth satoshi (end of block 0) = ordinal 4,999,999,999
+- The 5 billionth satoshi (end of block 0) = ordinal 4,999,999,999
 - Satoshis from block 1 start at ordinal 5,000,000,000
 
 ```

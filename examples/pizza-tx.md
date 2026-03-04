@@ -62,7 +62,7 @@ This was Laszlo's mining address. Input values ranged from 0.01 BTC (mining dust
 
 **5. The fee was enormous (percentage-wise)**
 
-~0.99 BTC as a fee — nearly 10% of the total value in absolute terms. In 2010, fees were essentially irrelevant (blocks were nearly empty), so nobody optimized for them. The wallet simply didn't create a change output.
+~0.99 BTC as a fee — about 0.01% of the total transaction value. In 2010, fees were essentially irrelevant (blocks were nearly empty), so nobody optimized for them. The wallet simply didn't create a change output.
 
 ## Verify It Yourself
 

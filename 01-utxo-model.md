@@ -21,6 +21,27 @@ When you "have 1 BTC," what you really have is a collection of UTXOs that add up
 | **Privacy** | Each UTXO is independent | Single account links all activity |
 | **Parallelism** | Transactions on different UTXOs can't conflict | Same-account transactions must be ordered |
 
+## The UTXO Lifecycle
+
+```mermaid
+flowchart LR
+    CB[Coinbase Tx<br/>Block N] -->|creates| U1[UTXO<br/>0.5 BTC]
+    TX1[Some Tx] -->|creates| U2[UTXO<br/>0.1 BTC]
+    U1 -->|spent by| TX2[Your Tx]
+    U2 -->|spent by| TX2
+    TX2 -->|creates| U3[UTXO<br/>0.3 BTC<br/>→ recipient]
+    TX2 -->|creates| U4[UTXO<br/>0.2999 BTC<br/>→ change]
+    TX2 -.->|0.0001 BTC fee| MINER[Miner]
+
+    style U1 fill:#f96,stroke:#333
+    style U2 fill:#f96,stroke:#333
+    style U3 fill:#6f9,stroke:#333
+    style U4 fill:#6f9,stroke:#333
+    style MINER fill:#ff9,stroke:#333
+```
+
+UTXOs are created (green) by transactions and destroyed (orange) when spent. The difference between inputs and outputs is the miner fee. There is no "balance" — only unspent outputs.
+
 ## Anatomy of a Transaction
 
 Every Bitcoin transaction does exactly one thing: **destroy old UTXOs and create new ones**.

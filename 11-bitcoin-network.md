@@ -66,7 +66,7 @@ The critical point: **pruned nodes are not less secure than archival nodes for t
 
 SPV stands for **Simplified Payment Verification**, described by Satoshi in Section 8 of the whitepaper. An SPV node:
 
-- Downloads only **block headers** (80 bytes per block — the entire header chain since genesis is ~60 MB)
+- Downloads only **block headers** (80 bytes per block — the entire header chain since genesis is ~75 MB)
 - Verifies the proof-of-work chain (headers link together; difficulty adjustments are correct)
 - Uses **Bloom filters** (BIP 37) or **compact block filters** (BIP 157/158) to check if specific transactions appear in blocks
 - Does **not** validate transactions or scripts independently
@@ -245,7 +245,7 @@ Introduced in Bitcoin Core 0.10.0, **headers-first sync** changed how nodes sync
 │                                                   │
 │  Phase 1: Download headers                        │
 │  ┌──┐ ┌──┐ ┌──┐ ┌──┐ ┌──┐ ... ┌──┐              │
-│  │H0│→│H1│→│H2│→│H3│→│H4│→...→│Hn│  (~60 MB)    │
+│  │H0│→│H1│→│H2│→│H3│→│H4│→...→│Hn│  (~75 MB)    │
 │  └──┘ └──┘ └──┘ └──┘ └──┘     └──┘              │
 │                                                   │
 │  Phase 2: Validate PoW chain                      │
